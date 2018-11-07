@@ -43,13 +43,13 @@ int main(int argc, char *argv[]) {
 	node_list curr = head;
 	
 	printf("<");
-	for(i=0; i<7; i++)
+	for(i=0; i<n; i++)
 	{
 		for(j=0; j<m-1; j++)
 		{
 			curr=curr->next;
 		}
-		if(i<6)
+		if(i<n-1)
 			printf("%d, ", curr->next->data);
 		else
 			printf("%d", curr->next->data);

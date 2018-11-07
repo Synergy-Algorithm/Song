@@ -11,7 +11,7 @@ struct NODE{
 
 void addNode(node_list target, int data)
 {
-	node_list newNode = (node_list*)malloc(sizeof(struct NODE)); // 괄호안에 그러면 NODE** 이렇게되는 이중포인터 되는거 아니야?
+	node_list newNode = malloc(sizeof(struct NODE)); // 괄호안에 그러면 NODE** 이렇게되는 이중포인터 되는거 아니야?
 	newNode->next = target->next;
 	newNode->data = data;
 	target->next = newNode;
@@ -27,8 +27,8 @@ void removeNode(node_list target)
 
 int main(int argc, char *argv[]) {
 	int i, j, n, m;
-	node_list head = (node_list*)malloc(sizeof(struct NODE));
-	node_list last = (node_list*)malloc(sizeof(struct NODE));
+	node_list head = malloc(sizeof(struct NODE));
+	node_list last = malloc(sizeof(struct NODE));
 	head->next = last;
 	scanf("%d %d", &n, &m);
 	

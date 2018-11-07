@@ -11,7 +11,7 @@ struct NODE{
 
 void addNode(node_list target, int data)
 {
-	node_list newNode = (node_list*)malloc(sizeof(struct NODE));
+	node_list newNode = (node_list*)malloc(sizeof(struct NODE)); // 괄호안에 그러면 NODE** 이렇게되는 이중포인터 되는거 아니야?
 	newNode->next = target->next;
 	newNode->data = data;
 	target->next = newNode;
